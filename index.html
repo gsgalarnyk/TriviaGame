@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./game.js"></script>
+    <audio id="ichiban" src="./ichi.mp3" type="audio/mpeg">
+  
+  <source src="./ichi.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="OPM" src="./OPM.mp3" type="audio/mpeg">
+  
+  <source src="./OPM.mp3" type="audio/mpeg">
+  
+</audio>
+</head>
+
+<body>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="full-page">
+        <div class="row col-md-12" id="page-top">
+            <div class="row col-md-12" id="page-title">
+                <h1 class="page-header row col-md-12" id="title">Angel Beats Trivia</h1>
+            </div>
+            <div class="row col-md-12" id="timer">120
+<br>	
+            		<input type="button" name="start" id="start" onclick="start(), timer()" value="Go!">
+            </div>
+            
+        </div>
+        <form class="row col-md-12 questionair" id="show">
+        
+            <div class="row col-md-12 fillMe" id="question1">
+                <h2 class="row">Who had the song My Song play just before their death?</h2>
+                <div>
+                    <input class="mc" type="radio" name="first" value="Yui">Yui
+                    <input class="mc" type="radio" name="first" value="Yuri">Yuri
+                    <input class="mc" type="radio" name="first" value="Yuzuru">Yuzuru
+                    <input class="mc" type="radio" name="first" value="Masami">Masami
+
+                </div>
+            </div>
+            
+            <div class="row col-md-12 fillMe" id="question2">
+                <h2 class="row">Which character was paralized from the waist down?</h2>
+                <div>
+                    <input class="mc" type="radio" name="second" value="HidekinYui">Hideki and Yui
+                    <input class="mc" type="radio" name="second" value="AngelnOtonashi">Angel and Otonashi
+                    <input class="mc" type="radio" name="second" value="HidekinOtonashi">Hideki and Otonashi
+                    <input class="mc" type="radio" name="second" value="YuinMasami">Yui and Masami
+
+                </div>
+            </div>
+            
+            <div class="row col-md-12 fillMe" id="question3">
+                <h2 class="row">Who did Otanshi have to confess his love for so that they may die?</h2>
+                <div>
+                    <input class="mc" type="radio" name="thrid" value="Otanashi">Otanashi
+                    <input class="mc" type="radio" name="thrid" value="Angel">Angel
+                    <input class="mc" type="radio" name="thrid" value="Noda">Noda
+                    <input class="mc" type="radio" name="thrid" value="TK">TK
+
+                </div>
+            </div>
+            <div class="row col-md-12 fillMe" id="question4">
+                <h2 class="row">What was the theme of TK's background?</h2>
+                <div>
+                    <input class="mc" type="radio" name="forth" value="Loss">Loss
+                    <input class="mc" type="radio" name="forth" value="Regret">Regret
+                    <input class="mc" type="radio" name="forth" value="Tragity">Tragity
+                    <input class="mc" type="radio" name="forth" value="???">???
+
+                </div>
+            </div>
+            <div class="row col-md-12 fillMe" id="question5">
+                <h2 class="row">Who loved super spicy Mapo tofu?</h2>
+                <div>
+                    <input class="mc" type="radio" name="fifth" value="Noda">Noda
+                    <input class="mc" type="radio" name="fifth" value="TK">TK
+                    <input class="mc" type="radio" name="fifth" value="Angel">Angel
+                    <input class="mc" type="radio" name="fifth" value="Yuzuru">Yuzuru
+
+                </div>
+            </div>
+            <div class="row col-md-12 fillMe" id="question6">
+                <h2 class="row">What is Eri, the deadly ninja,'s weakness?</h2>
+                <div>
+                    <input class="mc" type="radio" name="sixth" value="Spicyfood">Spicy Food
+                    <input class="mc" type="radio" name="sixth" value="StuffedAnimals">Stuffed Animals
+                    <input class="mc" type="radio" name="sixth" value="Boys">Boys
+                    <input class="mc" type="radio" name="sixth" value="Tests">Tests
+
+                </div>
+            </div>
+            <div class="row col-md-12 fillMe" id="question7">
+                <h2 class="row">How many members where in Girls Dead Monster?</h2>
+                <div>
+                    <input class="mc" type="radio" name="seventh" value="2">2
+                    <input class="mc" type="radio" name="seventh" value="3">3
+                    <input class="mc" type="radio" name="seventh" value="4">4
+                    <input class="mc" type="radio" name="seventh" value="5">5
+
+                </div>
+            </div>
+            <div class="row col-md-12 fillMe" id="question8">
+                <h2 class="row">What is the iconic song for Angel Beats</h2>
+                <div>
+                    <input class="mc" type="radio" name="eighth" value="IchibannoTakaramono" onclick="playAudio(), pauseAud()">Ichiban no Takaramono
+                    <input class="mc" type="radio" name="eighth" value="OnePunchManOpeningTheme" onclick="pauseAudio(), playAud()">OPM Opening Theme
+
+                </div>
+            </div>
+
+
+
+            <input type="button" name="done!" value="All Done?" id="here" onclick="done()">
+        </form>
+        <div id="hide" class="finalsheet row col-md-12">
+            <div class="totalCorrect">Total Correct Answers : </div>
+            <div class="totalWrong">Total Incorrect Answers : </div>
+        </div>
+        <div id="hide" class="failure">You failed to answer all questions in the eloted time. *Angel silently disaproves*</div>
+    </div>
+    <div class="col-md-2"></div>
+</body>
+
+</html>	

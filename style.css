@@ -1,0 +1,47 @@
+body {
+	font-family: sadness;
+    src: url(sadness.tff);
+	background-image: url("https://images.alphacoders.com/212/212351.jpg");
+	text-align: center;
+	color: #f1faff;
+}
+.centerText {
+	text-align: center;
+	
+}
+.btnrow1 {
+	background-color: purple;
+}
+
+.selected {
+	background-color: green;
+}
+#hide {
+	visibility: hidden;
+
+}
+#show {
+	visibility: visible;
+	
+}
+.questionair {
+	background-color: #02039b;
+	opacity: .8;
+}
+.fillMe {
+	margin-left: .1%;
+	opacity: 1;
+
+}
+
+#start, #here {
+	background: transparent;
+}
+#title {
+	font-size: 64px;
+	margin-left: 2%;
+}
+#timer {
+	margin-left: 1%;
+	font-size: 52px;
+}
